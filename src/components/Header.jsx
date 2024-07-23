@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import icoMenu from '../../public/ico-menu.svg';
 import icoScrollDown from '../../public/ico-scroll-down.svg';
-
+import Link from './Link';
 
 const Header = () => {
 
     const [  claseEstado, setClaseEstado  ] = useState('hidden')
 
     const handleClickHeader = () => {
-        console.log('click');
         if( claseEstado === 'hidden' ) {
           setClaseEstado( 'shown' );
         }
@@ -17,15 +16,7 @@ const Header = () => {
         }
       }
     
-    //   return (
-    //     <div>
-    //       <button onClick={handleClickHamb}>Hamb</button>
-    //       <div className={claseEstado}>
-    //         <button onClick={handleClickVolver}>Volver</button>
-    //       </div>
-    //     </div>
-    //   );
-    //}
+
 
 
     return (
@@ -35,22 +26,16 @@ const Header = () => {
           <button className="burguer_button" onClick={handleClickHeader}>  
              <img src={icoMenu} alt="Icono menu hamburguesa"/> 
           </button>
-         
+          <nav>
             <ul className={claseEstado}>
-                <li className=''>
-                    <a href="#" className='liNueva'>Patata</a>
-                </li>
-                <li>
-                    <a href="#" className='liNueva'>Pepino</a>
-                </li>
-                <li>
-                    <a href="#" className='liNueva'>Pimiento</a>
-                </li>
-                <li>
-                    <a href="#" className='liNueva'>Tomate</a>
-                </li>
+            
+                <Link link='https://adalab.es/bootcamp-programacion' text='bootcamp programacion' openInNewTab={false}/>
+                <Link link='https://adalab.es/bootcamp-data' text='bootcamp data analytics' openInNewTab={true}/>
+                <Link link='https://adalab.es/testimonios' text='testimonios' openInNewTab={false}/>
+                <Link link='https://adalab.es/blog' text='blog' openInNewTab={true}/>
+
             </ul>
-             
+            </nav>  
       </div>
       <div className="container">
         <h1 className="title_header">COMIENZOS</h1>
