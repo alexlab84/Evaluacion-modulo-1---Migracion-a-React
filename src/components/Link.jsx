@@ -8,7 +8,8 @@ const Link = (props) => {
     href={link} 
     className= 'liNueva' 
     target={openInNewTab ? '_blank' : '_self'} 
-    rel={openInNewTab ? 'noopener noreferrer' : ''} >
+    //rel={openInNewTab ? 'noopener noreferrer' : ''} 
+    >
         {text}
         </a>
 </li>
