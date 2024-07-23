@@ -5,14 +5,14 @@ import Link from './Link';
 
 const Header = () => {
 
-    const [  claseEstado, setClaseEstado  ] = useState('hidden')
+    const [  classState, setclassState  ] = useState('hidden')
 
     const handleClickHeader = () => {
-        if( claseEstado === 'hidden' ) {
-          setClaseEstado( 'shown' );
+        if( classState === 'hidden' ) {
+          setclassState( 'shown' );
         }
         else {
-          setClaseEstado('hidden');
+          setclassState('hidden');
         }
       }
     
@@ -27,7 +27,7 @@ const Header = () => {
              <img src={icoMenu} alt="Icono menu hamburguesa"/> 
           </button>
           <nav>
-            <ul className={claseEstado}>
+            <ul className={classState}>
             
                 <Link link='https://adalab.es/bootcamp-programacion' text='bootcamp programacion' openInNewTab={false}/>
                 <Link link='https://adalab.es/bootcamp-data' text='bootcamp data analytics' openInNewTab={true}/>
